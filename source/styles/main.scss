@@ -3,14 +3,15 @@ $font-stack:  'Montserrat', 'Helvetica Neue', Arial, sans-serif;
 html,body {
     margin: 0;
     padding:0;
-    width:100%;
+    width:100vw;
+    scroll-behavior: smooth;
 }
 
 #navbar {
   overflow: hidden;
   background-color: #EA4A27;
   width: 100%;
-  padding: 2.5vh 1vh;
+  height: 15vh;
   transition: 0.4s;
   position: fixed;
   top: 0;
@@ -18,20 +19,10 @@ html,body {
   //margin-bottom: auto;
 }
 
-#navbar ul {
+#navbar ul li {
   list-style: none;
 }
 
-#navbar ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: white;
-  text-decoration: none;
-}
-
-#navbar ul li a.current {
-  background: black;
-}
 
 /* Navbar links */
 .nav-text {
@@ -64,6 +55,7 @@ html,body {
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-bottom: 10vh;
 }
 
 #banner h1 {
@@ -76,11 +68,8 @@ html,body {
 
 
 
-
 .carousel-container {
   position: relative;
-  margin: 0;
-
 }
 
 .carousel-slide {
@@ -169,8 +158,36 @@ html,body {
 }
 
 
+#officers-caption {
+  width: 100%;
+  height:8vw;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  font: 100% $font-stack;
+  font-size:36px;
+  background-color: grey;
+  overflow: hidden;
+}
 
 #officers {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: 25vw;
+  background-color: grey;
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 75%;
+    height: auto;
+}
+
+.officer {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
 

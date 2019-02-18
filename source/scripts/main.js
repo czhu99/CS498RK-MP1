@@ -6,12 +6,12 @@ window.onscroll = function() {
 function navBarScroll() {
   var sections = document.getElementsByClassName("nav-text");
   if (document.body.scrollTop > 240 || document.documentElement.scrollTop > 240) {
-    document.getElementById("navbar").style.padding = ".5vh 1vh ";
+    document.getElementById("navbar").style.height = "10vh";
     for (var i = 0; i < sections.length; i++) {
       sections[i].style.fontSize = "24px";
     }
   } else {
-    document.getElementById("navbar").style.padding = "2.5vh  1vh ";
+    document.getElementById("navbar").style.height = "15vh";
     for (var i = 0; i < sections.length; i++) {
       sections[i].style.fontSize = "32px";
     }
