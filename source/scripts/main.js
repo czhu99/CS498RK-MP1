@@ -22,35 +22,56 @@ function navBarScroll() {
 
 
 // Code for handling carousel slides
-var slideIndex = 1;
+var index = 1;
 document.addEventListener("DOMContentLoaded", function(event) {
-  showSlides(slideIndex);
+  display(index);
 });
 
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function rotateSlide(n) {
+  index += n;
+  display(index);
 }
-window.plusSlides = plusSlides;
+window.rotateSlide = rotateSlide;
 
 // Thumbnail image controls
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  index = n;
+  display(index);
 }
 
-function showSlides(n) {
-  var i;
+function display(n) {
   var slides = document.getElementsByClassName("carousel-slide");
   if (n > slides.length) {
-    slideIndex = 1;
+    index = 1;
   }
   if (n < 1) {
-    slideIndex = slides.length;
+    index = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
 
-  slides[slideIndex-1].style.display = "block";
+  slides[index-1].style.display = "block";
+}
+
+//Code for modals
+window.onload = function() {
+
+  var modal = document.getElementById('officer-modal');
+  var imgs = document.getElementsByClassName("img-circle");
+  var modalImg = document.getElementById("officer-img");
+  for (var i = 0; i < imgs.length; i++) {
+    var img = imgs[i];
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 }
