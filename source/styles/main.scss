@@ -17,16 +17,19 @@ html,body {
   position: fixed;
   top: 0;
   z-index: 1;
-  //margin-bottom: auto;
 }
 
 #navbar ul li {
   list-style: none;
 }
 
-
+li a.highlight {
+  color: #132B4E;
+}
 /* Navbar links */
 .nav-text {
+  position: relative;
+  top: 50%;
   float: left;
   display: block;
   color: white;

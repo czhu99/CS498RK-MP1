@@ -19,7 +19,21 @@ function navBarScroll() {
 }
 
 //Code for handling navbar position
-
+document.addEventListener("DOMContentLoaded", function(event) {
+  var links = document.querySelectorAll("li a");
+  window.addEventListener("scroll", event => {
+    var scrollPos = window.scrollY;
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      var section = document.querySelector(link.hash);
+      if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+        link.classList.add("highlight");
+      } else {
+        link.classList.remove("highlight");
+      }
+    }
+  });
+});
 
 // Code for handling carousel slides
 var index = 1;
