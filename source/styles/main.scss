@@ -44,7 +44,7 @@ html,body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-image: url(assets/bgimage.png);
+  background-image: url(assets/bgimage.PNG);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -70,6 +70,7 @@ html,body {
 .carousel-slide {
   justify-content: center;
   align-items: center;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   display: none;
@@ -80,13 +81,13 @@ html,body {
 
 
 #slide1 {
-  background-image: url(assets/banner1.png);
+  background-image: url(assets/banner1.PNG);
 }
 #slide2 {
-  background-image: url(assets/banner2.png);
+  background-image: url(assets/banner2.PNG);
 }
 #slide3 {
-  background-image: url(assets/banner3.png);
+  background-image: url(assets/banner3.PNG);
 }
 
 .slide_text {
@@ -118,7 +119,7 @@ html,body {
   color: white;
   -webkit-text-stroke: 2px black;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 32px;
 
 }
 
@@ -169,6 +170,18 @@ html,body {
   background-color: #2F4F4F;
 }
 
+.officer {
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: top;
+  color: white;
+  text-align: center;
+  //vertical-align: middle;
+  font: 100% $font-stack;
+  font-size:28px;
+}
+
 .img-circle {
     border-radius: 50%;
     width: 75%;
@@ -184,8 +197,6 @@ html,body {
 }
 
 //modal code
-
-
 .modal {
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.9);
@@ -221,17 +232,6 @@ html,body {
 
 //
 
-.officer {
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-  justify-content: top;
-  color: white;
-  text-align: center;
-  //vertical-align: middle;
-  font: 100% $font-stack;
-  font-size:28px;
-}
 
 #contact {
  position: absolute;
@@ -245,7 +245,7 @@ video {
   min-height: 100%;
   width: auto;
   height: auto;
-  z-index: -1;
+  z-index: -2;
   //overflow: hidden;
 }
 
@@ -254,4 +254,37 @@ video {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.6);
+}
+
+#contact-text {
+  font: 100% $font-stack;
+  width: 100%;
+  height: 100%;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+  z-index: 0;
+  position: absolute;
+  top: 25%;
+  display: table-cell;
+}
+
+#icons {
+  display: flex;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  margin: auto;
+}
+
+#icons a {
+  display:flex;
+  flex-direction: column;
+  color: white;
+  width: 75%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }
