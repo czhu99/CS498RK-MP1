@@ -21,6 +21,7 @@ function navBarScroll() {
 //Code for handling navbar position
 document.addEventListener("DOMContentLoaded", function(event) {
   var links = document.querySelectorAll("li a");
+  links[0].classList.add("highlight");
   window.addEventListener("scroll", event => {
     var scrollPos = window.scrollY;
     for (var i = 0; i < links.length; i++) {
